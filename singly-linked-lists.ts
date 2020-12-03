@@ -27,11 +27,17 @@ class LinkedList {
     }
     return count;
   }
+
+  clear(): void {
+    this.head = null;
+  }
 }
 
 let node1 = new ListNode({ name: "John", age: 20 });
 let node2 = new ListNode({ name: "Jane", age: 30 });
+let node3 = new ListNode({ name: "Tom", age: 10 });
 node1.next = node2;
+node2.next = node3;
 
 const list = new LinkedList(node1);
 
