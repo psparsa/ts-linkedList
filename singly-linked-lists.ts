@@ -41,6 +41,10 @@ class LinkedList {
     }
     return lastNode;
   }
+
+  getFirst() {
+    return this.head;
+  }
 }
 
 let node1 = new ListNode({ name: "John", age: 20 });
@@ -53,3 +57,4 @@ const list = new LinkedList(node1);
 
 console.log("size:", list.size());
 console.log("last element:", list.getLast());
+console.log("first element:", list.getFirst().data);
