@@ -31,6 +31,16 @@ class LinkedList {
   clear(): void {
     this.head = null;
   }
+
+  getLast(): dataType | null {
+    let lastNode = this.head;
+    if (lastNode) {
+      while (lastNode.next) {
+        lastNode = lastNode.next;
+      }
+    }
+    return lastNode;
+  }
 }
 
 let node1 = new ListNode({ name: "John", age: 20 });
@@ -42,4 +52,4 @@ node2.next = node3;
 const list = new LinkedList(node1);
 
 console.log("size:", list.size());
-console.log(list.head.data);
+console.log("last element:", list.getLast());
